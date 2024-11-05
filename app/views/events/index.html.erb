@@ -6,12 +6,12 @@
 
  <h3> Voici les événements à venir : <h3>
 
- <p>
-
-  <% @events.each do |event| %>
+ <% @events.each do |event| %>
    
-      <h3><%= link_to event.title, event_path(event) %></h3>
-      <p>Écrit par : <%= event.user&.first_name  %></p>
+    <h3><%= link_to event.title, events_path(event) %></h3>
+    
+ <% end %>
+         
+   
 
-<% end %>
-</p>
+
