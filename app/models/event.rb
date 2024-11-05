@@ -2,7 +2,7 @@ class Event < ApplicationRecord
     has_many :participations
     has_many :participants, through: :participations, source: :user
 
-    # Validations
+  # Validations
   validates :start_date, presence: true
   validate :start_date_cannot_be_in_the_past
 
