@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "user/show"
   devise_for :users
   root "events#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  resource :events
+  resource :events 
   resource :users
   # Defines the root path route ("/")
   # root "posts#index"
